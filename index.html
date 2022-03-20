@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="stylesheet" type="text/css" href="agenda.css" media="screen" />
+    <script type='text/javascript' src="contatos.js"></script>
+
+
+</head>
+
+<!--Corpo do formulário-->
+<body page='lista'>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Agenda</a></li>
+        </ul>
+
+    </nav>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Fone</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="vizualizar('cadastro', true)">Novo usuário</button>
+        </div>
+
+    </div>
+
+<form id='cadastroRegistro'>
+
+<div class='label'>
+    <div>ID</div>
+    <div>
+        <input type='number' readonly id='id' />
+    </div>
+</div>
+
+<div class='label'>
+    <div>Nome</div>
+    <div>
+        <input id='nome' placeholder="Ex:Jõao" required/>
+    </div>
+</div>
+
+<div class='label'>
+    <div>Sobrenome</div>
+    <div>
+        <input id='sobrenome' placeholder="Ex:Santos" />
+    </div>
+</div>
+
+<div class='label'>
+    <div>Fone</div>
+    <div>
+        <input type='tel' id='fone' required placeholder="ex:(DD) 00000-0000"/>
+    </div>
+</div>
+
+<div>
+    <button onclick="realizado()">Salvar</button>
+    <button onclick="vizualizar('lista')" class="cinza" type='button'>Cancelar</button>
+</div>
+
+</form>
+
+
+</body>
+</html>
